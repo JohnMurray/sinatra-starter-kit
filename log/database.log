@@ -1,0 +1,25 @@
+
+D, [2011-07-28T12:42:49.562065 #62389] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+D, [2011-07-28T12:42:49.563294 #62389] DEBUG -- :   [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+D, [2011-07-28T12:42:49.564105 #62389] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+D, [2011-07-28T12:42:49.564305 #62389] DEBUG -- :   [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+D, [2011-07-28T12:42:49.564685 #62389] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+D, [2011-07-28T12:42:49.564914 #62389] DEBUG -- :   [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+D, [2011-07-28T12:42:49.565431 #62389] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+I, [2011-07-28T12:42:49.565493 #62389]  INFO -- : Migrating to CreateTable (1)
+D, [2011-07-28T12:42:49.565636 #62389] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+D, [2011-07-28T12:42:49.583028 #62389] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDROP TABLE "stuffs_table"[0m
+D, [2011-07-28T12:42:49.583095 #62389] DEBUG -- : SQLite3::SQLException: no such table: stuffs_table: DROP TABLE "stuffs_table"
+

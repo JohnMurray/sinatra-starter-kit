@@ -1,0 +1,3 @@
+#!/bin/bash
+gem install rspec
+gem install cucumber

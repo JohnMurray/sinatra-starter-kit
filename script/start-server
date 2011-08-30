@@ -1,0 +1,2 @@
+#!/bin/bash
+thin start -e development -p 4567
