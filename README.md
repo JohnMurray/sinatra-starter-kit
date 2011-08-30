@@ -7,3 +7,8 @@ This is my current Sinatra configuration that I like to start each new site with
 
 ## What it is not
 This is not intended to provide a Rails-like environment with all the necessary tools and auto-generation features you find in Rails. I love Sinatra because of its simplicity and I don't want to over-complicate things.
+
+## What it is going to be (the roadmap for v0.2)
+  + Add support and examples for Haml and Sass
+  + Add support and examples for coffee-script
+  + Encapsulate endpoints into the Controller folder (or another appropriately named folder (like endpoints)
