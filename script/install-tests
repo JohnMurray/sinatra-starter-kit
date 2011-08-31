@@ -1,3 +1,4 @@
 #!/bin/bash
 gem install rspec
 gem install cucumber
+rvm gemset export .gems
