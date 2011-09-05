@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# setup magic strings
+project="Node.js"
+project_repo="https://github.com/joyent/node.git"
+project_dir="node"
+redirect_file=/dev/null
+
+# setup colors used for output
+c_eol="\033[00m"
+c_yel="\033[1;33m"
+c_red="\033[1;31m"
+c_grn="\033[1;32m"
+
+
+# check if Node.js is already installed and if so, just stop
+if [ -e `which node` ]
+then
+  echo -ne "${c_grn}You already have Node.js installed. Yay"
+  echo -n \!
+  echo -e "${c_eol}"
+  exit 0
+fi
+
+
+# start the installation process for Node.js
+echo -e "${c_yel}NODE.JS Installation${c_eol}"
+
+
+# download Node.js
+if [ -e `which git` ]
+then
+  pushd /tmp &> $redirect_file
+  echo -e "${c_yel}Copying $project to a temporary directory `pwd`/$project_dir ${c_eol}"
+  git clone $project_repo $project_dir &> $redirect_file
+  if [ $? -eq 0 ]
+  then
+    echo -e "${c_yel}Done cloning $project ${c_eol}"
+  else
+    echo -e "${c_red}Error copying $project to temporary directory `pwd`/$project_dir ${c_eol}"
+    exit 1
+  fi
+  cd $project_dir
+else
+  echo -e "${c_red}You must install Git before installing $project ${c_eol}"
+  exit 1
+fi
+
+# Compile and install
+if [ -e `which make` ]
+then
+  echo -e "${c_yel}Configuring and making $project ${c_eol}"
+  ./configure &> $redirect_file
+  make &> $redirect_file
+  echo -e "${c_yel}Testing $project ${c_eol}"
+  make test &> $redirect_file
+  echo -e "${c_yel}Installing $project to the default location${c_eol}"
+  sudo make install &> $redirect_file
+else
+  echo "${c_red}You must install make before continuing${c_eol}"
+  exit 1
+fi
+
+# Cleanup
+cd ..
+rm -rf $project_dir
+popd &> $redirect_file
+
+echo "${c_grn}DONE INSTALLING :-)${c_eol}"

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# get the directory of the current script
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+
+# setup colors used for output
+c_eol="\033[00m"
+c_yel="\033[1;33m"
+c_red="\033[1;31m"
+c_grn="\033[1;32m"
+
+
+# check if less is already installed
+if [ -e `which lessc` ] 
+then
+  echo -e "${c_grn}LESS is already installed${c_eol}"
+  exit 0
+fi
+
+
+# check if npm exists and only install if so
+# if not, then install NPM (node package manager)
+if [ -e `which npm` ]
+then
+  echo -e "${c_yel}Installing LESS${c_eol}"
+  npm install -g less
+  if [ $? -eq 0 ]
+  then
+    echo -e "${c_grn}LESS has successfully installed${c_eol}"
+  else
+    echo -e "${c_red}LESS could not be installed, try doing in manually... sorry${c_eol}"
+else 
+  bash "${DIR}/npm"
+  bash "${DIR}/less"
+fi
