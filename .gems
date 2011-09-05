@@ -1,18 +1,29 @@
-# default.gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+# .gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+activemodel -v3.1.0
 activemodel -v3.0.9
+activerecord -v3.1.0
 activerecord -v3.0.9
+activesupport -v3.1.0
 activesupport -v3.0.9
+arel -v2.2.1
 arel -v2.0.10
+bcrypt-ruby -v3.0.0
+builder -v3.0.0
 builder -v2.1.2
 daemons -v1.1.4
 eventmachine -v0.12.10
+haml -v3.1.2
 httpclient -v2.2.1
+i18n -v0.6.0
 i18n -v0.5.0
 logger -v1.2.8
+multi_json -v1.0.3
 rack -v1.3.2
+rake -v0.9.2
 sinatra -v1.2.6
 soap4r -v1.5.8
 sqlite3 -v1.3.4
 thin -v1.2.11
+tilt -v1.3.3
 tilt -v1.3.2
 tzinfo -v0.3.29
