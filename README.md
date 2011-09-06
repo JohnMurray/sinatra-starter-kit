@@ -27,11 +27,11 @@ Follow the instructions below to get up and running with Sinatra quickly
     + ~~Include by default~~
     + ~~Examples~~
   + LESS
-    + Installation scripts
+    + ~~Installation scripts~~
     + Rake tasks
     + Examples
   + coffee-script
-    + Installation scripts
+    + ~~Installation scripts~~
     + Rake tasks
     + Examples
   + Encapsulate endpoints into the Controller folder (or another appropriately named folder (like endpoints)
