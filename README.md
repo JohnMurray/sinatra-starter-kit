@@ -10,10 +10,12 @@ This is not intended to provide a Rails-like environment with all the necessary 
 
 ## Getting started with the starter kit
 What you need to get started (yeah, the process isn't as smooth as I'd like it yet):
+  
   + RVM (http://beginrescueend.com/)
   + Ruby 1.9.2 (via RVM)
 
 Follow the instructions below to get up and running with Sinatra quickly
+  
   + `git clone git://github.com/JohnMurray/sinatra-starter-kit.git MyApp`
   + `cd MyApp`
   + Accept the RVM-rc file (installs all required gems into a gemset)
